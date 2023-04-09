@@ -1,0 +1,24 @@
+{
+    "name": "osynapsy/osynapsy-console",
+    "version": "0.1",
+    "homepage": "http://www.osynapsy.net/console",
+    "type": "library",
+    "description": "Console library",
+    "keywords": ["Osynapsy", "Console"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pietro Celeste",
+            "email": "p.celeste@osynapsy.net",
+            "homepage": "https://github.com/osynapsy/osynapsy-console/wiki"
+        }
+    ],
+    "require": {
+        "php" : ">=7.2.0"
+    },
+    "autoload" : {
+        "psr-4": {
+            "Osynapsy\\Console\\": "src/"
+        }
+    }
+}
