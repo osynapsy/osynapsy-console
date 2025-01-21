@@ -1,6 +1,6 @@
 {
     "name": "osynapsy/osynapsy-console",
-    "version": "0.1",
+    "version": "0.2",
     "homepage": "http://www.osynapsy.net/console",
     "type": "library",
     "description": "Console library",
