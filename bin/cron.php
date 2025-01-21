@@ -11,13 +11,14 @@
 
 chdir(__DIR__);
 
-$composerAutoloadPath = realpath(__DIR__.'/../../../autoload.php');
+$vendorDir = realpath(__DIR__.'/../../');
+require $vendorDir. '/autoload.php';
 
-if ($composerAutoloadPath === false) {
-    die(sprintf('Non sono riuscito a trovare l\'autoload composer in %s'.PHP_EOL, $argv[0]));
+try {
+    $cron = new \Osynapsy\Console\Cron($vendorDir, $argv);
+    echo $cron->run();
+} catch (\Exception $e) {
+    echo $e->getMessage();
+} finally {
+    echo PHP_EOL;
 }
-
-require $composerAutoloadPath;
-
-$cron = new \Osynapsy\Console\Cron($argv);
-echo $cron->run();
