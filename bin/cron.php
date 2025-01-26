@@ -11,7 +11,7 @@
 
 chdir(__DIR__);
 
-$vendorDir = realpath(__DIR__.'/../../');
+$vendorDir = realpath(__DIR__.'/../../../');
 require $vendorDir. '/autoload.php';
 
 try {
