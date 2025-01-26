@@ -12,7 +12,7 @@
 namespace Osynapsy\Console;
 
 use Osynapsy\Kernel\ConfigLoader;
-use Osynapsy\Kernel\Route;
+use Osynapsy\Routing\Route;
 use Osynapsy\Kernel;
 
 /**
