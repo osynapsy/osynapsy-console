@@ -11,7 +11,7 @@
 
 namespace Osynapsy\Console;
 
-use Osynapsy\Kernel\Loader;
+use Osynapsy\Kernel\ConfigLoader;
 use Osynapsy\Kernel\Route;
 use Osynapsy\Kernel;
 
@@ -86,7 +86,7 @@ class Cron
 
     private function loadAppConfiguration($appConfFilePath)
     {        
-        return (new Loader($appConfFilePath))->get();
+        return (new ConfigLoader($appConfFilePath))->get();
     }
 
     private function loadCronJobs($appConfiguration)
