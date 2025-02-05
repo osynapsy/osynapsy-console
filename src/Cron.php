@@ -107,8 +107,8 @@ class Cron
             }            
             $jobRoute = new Route($job['id'], null, $appId, $job['controller']);
             $kernel = new Kernel($instanceFile);
-            $request = $kernel->requestFactory();             
-            echo $kernel->runApplication($jobRoute, $request);
+            Kernel::$request = $kernel->requestFactory();
+            echo $kernel->runApplication($jobRoute, Kernel::$request);
         }
     }
 
